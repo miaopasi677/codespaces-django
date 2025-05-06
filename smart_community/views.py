@@ -1,10 +1,14 @@
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required, permission_required
+from django.shortcuts import render
 from smart_community.encryption.sm4 import SM4
 from smart_community.blockchain.eth_contract import store_hash
 from smart_community.audit.logging import log_action
-from smart_community.models import CommunityRecord
+from smart_community.models import CommunityRecord, AuditLog
 from config.settings import ENCRYPTION
+
+def index(request):
+    return render(request, 'index.html')
 
 @login_required
 @permission_required('smart_community.add_communityrecord', raise_exception=True)
@@ -41,3 +45,8 @@ def verify_data(request, id):
         })
     except CommunityRecord.DoesNotExist:
         return JsonResponse({'error': 'Permission denied'}, status=403)
+
+def api_docs(request):
+    # 获取最近的审计日志记录
+    audit_logs = AuditLog.objects.all().order_by('-timestamp')[:50]
+    return render(request, 'api_docs.html', {'audit_logs': audit_logs})

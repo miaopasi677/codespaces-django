@@ -31,7 +31,9 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'smart_community' / 'templates',  # 添加这一行
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,8 +72,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 BLOCKCHAIN = {
     'PROVIDER': 'http://127.0.0.1:8545',
-    'CONTRACT_ADDRESS': '0xaEA11a3A1b08C8E6db70E7AaCd2a9ef9A4a44551',
-    'PRIVATE_KEY': '0xa48eff7ef5141e1e896a2f187a7bd9ee82acfbafb21b2011e7815c75cfee5391',  # 字符串
+    'CONTRACT_ADDRESS': '0xDeb51eAD64Ebe3ee86117c072F65E381f2Db7D54',
+    'PRIVATE_KEY': '0x06e0da4914f7374baaa0623cb704fa57fc3d223214b31763d21dce042a284019',  # 字符串
 }
 ENCRYPTION = {
     'SM4_KEY': b'1234567890abcdef1234567890abcdef',  # 16 字节密钥
