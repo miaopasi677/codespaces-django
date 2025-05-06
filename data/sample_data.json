@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "resident_name": "Resident_1",
+    "data": "Community record 1"
+  },
+  {
+    "id": 2,
+    "resident_name": "Resident_2",
+    "data": "Community record 2"
+  },
+  {
+    "id": 3,
+    "resident_name": "Resident_3",
+    "data": "Community record 3"
+  },
+  {
+    "id": 4,
+    "resident_name": "Resident_4",
+    "data": "Community record 4"
+  },
+  {
+    "id": 5,
+    "resident_name": "Resident_5",
+    "data": "Community record 5"
+  },
+  {
+    "id": 6,
+    "resident_name": "Resident_6",
+    "data": "Community record 6"
+  },
+  {
+    "id": 7,
+    "resident_name": "Resident_7",
+    "data": "Community record 7"
+  },
+  {
+    "id": 8,
+    "resident_name": "Resident_8",
+    "data": "Community record 8"
+  },
+  {
+    "id": 9,
+    "resident_name": "Resident_9",
+    "data": "Community record 9"
+  },
+  {
+    "id": 10,
+    "resident_name": "Resident_10",
+    "data": "Community record 10"
+  }
+]

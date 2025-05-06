@@ -1,0 +1,5 @@
+django==4.2.11
+gmssl==3.2.1
+web3==6.11.0
+py-solc-x==1.1.1
+requests==2.31.0
